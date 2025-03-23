@@ -1,79 +1,57 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const darkModeToggle = document.getElementById("dark-mode-toggle");
-    const body = document.body;
+// Fade-in Animation for Sections
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('section');
 
-    // Load dark mode preference from local storage
-    if (localStorage.getItem("darkMode") === "enabled") {
-        body.classList.add("dark-mode");
-    }
+    const options = {
+        threshold: 0.2 // Trigger when 20% of the section is visible
+    };
 
-    darkModeToggle.addEventListener("click", function() {
-        body.classList.toggle("dark-mode");
-        if (body.classList.contains("dark-mode")) {
-            localStorage.setItem("darkMode", "enabled");
-        } else {
-            localStorage.setItem("darkMode", "disabled");
-        }
-    });
-
-    // Smooth scrolling for navigation links
-    document.querySelectorAll("nav ul li a").forEach(anchor => {
-        anchor.addEventListener("click", function(e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute("href")).scrollIntoView({
-                behavior: "smooth"
-            });
-        });
-    });
-
-    // Dynamic background images for sections
-    const sections = document.querySelectorAll("section");
-    const images = ["bg1.jpg", "bg2.jpg", "bg3.jpg", "bg4.jpg"];
-    sections.forEach((section, index) => {
-        section.style.background = `url('images/${images[index % images.length]}') center/cover no-repeat`;
-        section.style.color = "white";
-        section.style.padding = "100px 20px";
-    });
-
-    // Fade-in animations for elements on scroll
-    const observer = new IntersectionObserver(entries => {
+    const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add("fade-in");
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Stop observing once visible
             }
         });
-    }, { threshold: 0.2 });
+    }, options);
 
-    document.querySelectorAll(".project, .service, .skill-category").forEach(element => {
-        element.classList.add("hidden");
-        observer.observe(element);
+    sections.forEach(section => {
+        observer.observe(section);
     });
-
-    // Image Carousel Functionality
-    const carousel = document.querySelector(".carousel-images");
-    const imagesList = document.querySelectorAll(".carousel-images img");
-    const prevBtn = document.querySelector(".carousel-btn.left");
-    const nextBtn = document.querySelector(".carousel-btn.right");
-
-    let index = 0;
-
-    function updateCarousel() {
-        carousel.style.transform = `translateX(${-index * 100}%)`;
-    }
-
-    nextBtn.addEventListener("click", function() {
-        index = (index + 1) % imagesList.length;
-        updateCarousel();
-    });
-
-    prevBtn.addEventListener("click", function() {
-        index = (index - 1 + imagesList.length) % imagesList.length;
-        updateCarousel();
-    });
-
-    // Auto-slide every 3 seconds
-    setInterval(() => {
-        index = (index + 1) % imagesList.length;
-        updateCarousel();
-    }, 3000);
 });
+
+// Dark Mode Toggle
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+const body = document.body;
+
+darkModeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    darkModeToggle.textContent = body.classList.contains('dark-mode') ? 'Toggle Light Mode' : 'Toggle Dark Mode';
+});
+
+// Carousel Functionality
+const carouselImages = document.querySelector('.carousel-images');
+const images = document.querySelectorAll('.carousel-images img');
+const leftBtn = document.querySelector('.carousel-btn.left');
+const rightBtn = document.querySelector('.carousel-btn.right');
+
+let currentIndex = 0;
+const totalImages = images.length;
+
+function updateCarousel() {
+    const offset = -currentIndex * 100; // Move by 100% of the image width
+    carouselImages.style.transform = `translateX(${offset}%)`;
+}
+
+leftBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalImages - 1;
+    updateCarousel();
+});
+
+rightBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex < totalImages - 1) ? currentIndex + 1 : 0;
+    updateCarousel();
+});
+
+// Initialize the carousel
+updateCarousel();

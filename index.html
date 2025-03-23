@@ -1,56 +1,147 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 <head>
-    <meta charset='UTF-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vanshika's Portfolio</title>
-    <link rel='stylesheet' href='style.css'>
-    <script src='script.js' defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
 </head>
 <body>
+    <!-- Navigation Bar -->
     <nav>
         <h1>Vanshika's Portfolio</h1>
         <ul>
-            <li><a href='#about'>About</a></li>
-            <li><a href='#projects'>Projects</a></li>
-            <li><a href='#skills'>Skills</a></li>
-            <li><a href='#services'>Services</a></li>
-            <li><a href='#gallery'>Gallery</a></li>
-            <li><a href = '#Contacts'>Contacts</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-        <button id='dark-mode-toggle'>Toggle Dark Mode</button>
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
     </nav>
 
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Hi, I’m Vanshika</h1>
+            <p>A Full Stack Java Developer & Tech Enthusiast Ready to Build Your Next Project</p>
+            <p class="tagline">Turning Ideas into Innovative Tech Solutions</p>
+            <a href="#contact" class="cta-button">Hire Me</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
         <div class="about-container">
-            <img src="your-photo.jpg" alt="Your Photo" class="about-photo">
-            <p>Hi, I’m Vanshika, a tech enthusiast skilled in Machine Learning, Data Science, Web Development, and Mobile Application Development using Java, making me a Full Stack Java Developer. Beyond technical skills, I have experience in Social Media Marketing, I’m an occasional author, a confident public speaker, and I dream of becoming an entrepreneur..</p>
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Your Photo" class="about-photo">
+            <div class="about-text">
+                <p>Hi, I’m Vanshika, a tech enthusiast skilled in Machine Learning, Data Science, Web Development, and Mobile Application Development using Java, making me a Full Stack Java Developer. Beyond technical skills, I have experience in Social Media Marketing, I’m an occasional author, a confident public speaker, and I dream of becoming an entrepreneur.</p>
+                <ul class="achievements">
+                    <li><i class="fas fa-trophy"></i> Won 1st place in a national hackathon for an AI project.</li>
+                    <li><i class="fas fa-users"></i> Led a team of 5 to increase media visibility by 60% at VentureNest TBI.</li>
+                    <li><i class="fas fa-book"></i> Published 10+ articles in my Tech Bestie LinkedIn newsletter.</li>
+                </ul>
+            </div>
         </div>
     
         <div class="carousel-container">
-            <button class="carousel-btn left">&#10094;</button>
+            <button class="carousel-btn left">❮</button>
             <div class="carousel-images">
-                <img src="image1.jpg" alt="Image 1">
-                <img src="image2.jpg" alt="Image 2">
-                <img src="image3.jpg" alt="Image 3">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&h=300&q=80" alt="Image 1">
+                <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&h=300&q=80" alt="Image 2">
+                <img src="https://images.unsplash.com/photo-1508830524289-0adcbe822b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&h=300&q=80" alt="Image 3">
             </div>
-            <button class="carousel-btn right">&#10095;</button>
+            <button class="carousel-btn right">❯</button>
         </div>
     </section>
-    
 
-    <section id='projects'>
+    <!-- Projects Section -->
+    <section id="projects">
         <h2>Projects</h2>
-        <div class='project'><h3>Machine Learning Model</h3><p>Built a model to predict exam topics.</p></div>
-        <div class='project'><h3>ERP Website</h3><p>Developed an ERP website for business management.</p></div>
-        <div class='project'><h3>Quick BILL</h3><p>Created a web and mobile app for quick billing.</p></div>
-        <div class='project'><h3>Jarvis AI Assistant</h3><p>Designed the frontend for an AI assistant.</p></div>
-        <div class='project'><h3>VentureNest TBI</h3><p>Led marketing, increased media visibility by 60%.</p></div>
-        <div class='project'><h3>Tech Bestie Newsletter</h3><p>Author of a LinkedIn newsletter on tech.</p></div>
+        <div class="projects-container">
+            <div class="project">
+                <div class="project-content">
+                    <div class="project-text">
+                        <h3>Machine Learning Model</h3>
+                        <p>Built a model to predict exam topics using advanced algorithms.</p>
+                        <a href="#" class="project-link">View Project</a>
+                    </div>
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Machine Learning Model">
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-content">
+                    <div class="project-text">
+                        <h3>ERP Website</h3>
+                        <p>Developed an ERP website for business management with a user-friendly interface.</p>
+                        <a href="#" class="project-link">View Project</a>
+                    </div>
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="ERP Website">
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-content">
+                    <div class="project-text">
+                        <h3>Quick BILL</h3>
+                        <p>Created a web and mobile app for quick billing, improving efficiency.</p>
+                        <a href="#" class="project-link">View Project</a>
+                    </div>
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Quick BILL">
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-content">
+                    <div class="project-text">
+                        <h3>Jarvis AI Assistant</h3>
+                        <p>Designed the frontend for an AI assistant with a modern UI.</p>
+                        <a href="#" class="project-link">View Project</a>
+                    </div>
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Jarvis AI Assistant">
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-content">
+                    <div class="project-text">
+                        <h3>VentureNest TBI</h3>
+                        <p>Led marketing efforts, increasing media visibility by 60%.</p>
+                        <a href="#" class="project-link">View Project</a>
+                    </div>
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="VentureNest TBI">
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-content">
+                    <div class="project-text">
+                        <h3>Tech Bestie Newsletter</h3>
+                        <p>Author of a LinkedIn newsletter on tech, sharing insights and updates.</p>
+                        <a href="#" class="project-link">View Project</a>
+                    </div>
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Tech Bestie Newsletter">
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id='skills'>
+    <!-- Skills Section -->
+    <section id="skills">
         <h2>Skills</h2>
         <h3>Programming Languages</h3>
         <div class="skill-buttons">
@@ -83,41 +174,77 @@
         </div>
     </section>
 
-    <section id='services'>
+    <!-- Services Section -->
+    <section id="services">
         <h2>Services</h2>
-        <div class='service'><h3>Web Development</h3><p>Building responsive and efficient websites using modern technologies.</p></div>
-        <div class='service'><h3>Machine Learning Solutions</h3><p>Developing AI-driven solutions for businesses and startups.</p></div>
-        <div class='service'><h3>Social Media Marketing</h3><p>Creating impactful marketing strategies to enhance brand presence.</p></div>
+        <div class="services-container">
+            <div class="service">
+                <i class="fas fa-code service-icon"></i>
+                <h3>Web Development</h3>
+                <p>Building responsive and efficient websites using modern technologies like Flask and JavaScript.</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-brain service-icon"></i>
+                <h3>Machine Learning Solutions</h3>
+                <p>Developing AI-driven solutions for businesses and startups using TensorFlow and PyTorch.</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-bullhorn service-icon"></i>
+                <h3>Social Media Marketing</h3>
+                <p>Creating impactful marketing strategies to enhance brand presence and engagement.</p>
+            </div>
+        </div>
     </section>
 
-    <section id='gallery'>
+    <!-- Gallery Section -->
+    <section id="gallery">
         <h2>Gallery</h2>
-        <div class='gallery-section'>
+        <div class="gallery-section">
             <h3>Anchoring</h3>
-            <div class='gallery-container'>
-                <img src='anchoring1.jpg' alt='Anchoring Image 1'>
-                <img src='anchoring2.jpg' alt='Anchoring Image 2'>
-                <img src='anchoring3.jpg' alt='Anchoring Image 3'>
+            <div class="gallery-container">
+                <img src="https://images.unsplash.com/photo-1517466786969-9c0c4791b8c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="Anchoring Image 1">
+                <img src="https://images.unsplash.com/photo-1591115765373-6a83d122f5d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="Anchoring Image 2">
+                <img src="https://images.unsplash.com/photo-1548407260-1a2d7f024969?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="Anchoring Image 3">
             </div>
         </div>
-        <div class='gallery-section'>
+        <div class="gallery-section">
             <h3>Hackathons</h3>
-            <div class='gallery-container'>
-                <img src='hackathon1.jpg' alt='Hackathon Image 1'>
-                <img src='hackathon2.jpg' alt='Hackathon Image 2'>
-                <img src='hackathon3.jpg' alt='Hackathon Image 3'>
+            <div class="gallery-container">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="Hackathon Image 1">
+                <img src="https://images.unsplash.com/photo-1531482615713-2afd4349792d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="Hackathon Image 2">
+                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="Hackathon Image 3">
             </div>
         </div>
-        <div class='gallery-section'>
+        <div class="gallery-section">
             <h3>Startup</h3>
-            <div class='gallery-container'>
-                <img src='startup1.jpg' alt='Startup Image 1'>
-                <img src='startup2.jpg' alt='Startup Image 2'>
-                <img src='startup3.jpg' alt='Startup Image 3'>
+            <div class="gallery-container">
+                <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="Startup Image 1">
+                <img src="https://images.unsplash.com/photo-1553877522-43269d8ea9f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Startup Image 2">
+                <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="Startup Image 3">
             </div>
         </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h2>What Clients Say</h2>
+        <div class="testimonials-container">
+            <div class="testimonial">
+                <p>"Vanshika delivered an amazing web app for our business. Her expertise in Java and Flask made the project a success!"</p>
+                <h4>John Doe, CEO of TechCorp</h4>
+            </div>
+            <div class="testimonial">
+                <p>"Her machine learning solutions helped us optimize our operations. Highly recommend her services!"</p>
+                <h4>Jane Smith, Data Analyst</h4>
+            </div>
+            <div class="testimonial">
+                <p>"The social media campaign Vanshika led for us was a game-changer. Our engagement skyrocketed!"</p>
+                <h4>Michael Brown, Marketing Manager</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
     <section id="contact">
         <h2>Get In Touch</h2>
         <p>Interested in collaborating or just want to say hi? Drop me a message!</p>
@@ -130,10 +257,40 @@
             </form>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/your-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/your-profile" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="mailto:your-email@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/bansalvanshika09" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:bansalvanshika691@gmail.com"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Vanshika's Portfolio</h3>
+                <p>Turning ideas into innovative tech solutions since 2023.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Me</h3>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/your-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/bansalvanshika09" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:bansalvanshika691@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Vanshika. All Rights Reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
