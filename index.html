@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Vanshika's Portfolio</title>
+    <link rel='stylesheet' href='style.css'>
+    <script src='script.js' defer></script>
+</head>
+<body>
+    <nav>
+        <h1>Vanshika's Portfolio</h1>
+        <ul>
+            <li><a href='#about'>About</a></li>
+            <li><a href='#projects'>Projects</a></li>
+            <li><a href='#skills'>Skills</a></li>
+            <li><a href='#services'>Services</a></li>
+            <li><a href='#gallery'>Gallery</a></li>
+            <li><a href = '#Contacts'>Contacts</a></li>
+        </ul>
+        <button id='dark-mode-toggle'>Toggle Dark Mode</button>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <img src="your-photo.jpg" alt="Your Photo" class="about-photo">
+            <p>Hi, I’m Vanshika, a tech enthusiast skilled in Machine Learning, Data Science, Web Development, and Mobile Application Development using Java, making me a Full Stack Java Developer. Beyond technical skills, I have experience in Social Media Marketing, I’m an occasional author, a confident public speaker, and I dream of becoming an entrepreneur..</p>
+        </div>
+    
+        <div class="carousel-container">
+            <button class="carousel-btn left">&#10094;</button>
+            <div class="carousel-images">
+                <img src="image1.jpg" alt="Image 1">
+                <img src="image2.jpg" alt="Image 2">
+                <img src="image3.jpg" alt="Image 3">
+            </div>
+            <button class="carousel-btn right">&#10095;</button>
+        </div>
+    </section>
+    
+
+    <section id='projects'>
+        <h2>Projects</h2>
+        <div class='project'><h3>Machine Learning Model</h3><p>Built a model to predict exam topics.</p></div>
+        <div class='project'><h3>ERP Website</h3><p>Developed an ERP website for business management.</p></div>
+        <div class='project'><h3>Quick BILL</h3><p>Created a web and mobile app for quick billing.</p></div>
+        <div class='project'><h3>Jarvis AI Assistant</h3><p>Designed the frontend for an AI assistant.</p></div>
+        <div class='project'><h3>VentureNest TBI</h3><p>Led marketing, increased media visibility by 60%.</p></div>
+        <div class='project'><h3>Tech Bestie Newsletter</h3><p>Author of a LinkedIn newsletter on tech.</p></div>
+    </section>
+
+    <section id='skills'>
+        <h2>Skills</h2>
+        <h3>Programming Languages</h3>
+        <div class="skill-buttons">
+            <button>Python</button>
+            <button>Java</button>
+            <button>C++</button>
+            <button>JavaScript</button>
+        </div>
+        <h3>Frameworks/Tools</h3>
+        <div class="skill-buttons">
+            <button>Flask</button>
+            <button>TensorFlow</button>
+            <button>Scikit-learn</button>
+            <button>PyTorch</button>
+            <button>Pandas</button>
+            <button>NumPy</button>
+            <button>Seaborn</button>
+            <button>Matplotlib</button>
+            <button>Jetpack Compose</button>
+            <button>Spring Boot</button>
+            <button>Swing</button>
+        </div>
+        <h3>Soft Skills</h3>
+        <div class="skill-buttons">
+            <button>Communication</button>
+            <button>Leadership</button>
+            <button>Teamwork</button>
+            <button>Creative Writing</button>
+            <button>Critical Thinking</button>
+        </div>
+    </section>
+
+    <section id='services'>
+        <h2>Services</h2>
+        <div class='service'><h3>Web Development</h3><p>Building responsive and efficient websites using modern technologies.</p></div>
+        <div class='service'><h3>Machine Learning Solutions</h3><p>Developing AI-driven solutions for businesses and startups.</p></div>
+        <div class='service'><h3>Social Media Marketing</h3><p>Creating impactful marketing strategies to enhance brand presence.</p></div>
+    </section>
+
+    <section id='gallery'>
+        <h2>Gallery</h2>
+        <div class='gallery-section'>
+            <h3>Anchoring</h3>
+            <div class='gallery-container'>
+                <img src='anchoring1.jpg' alt='Anchoring Image 1'>
+                <img src='anchoring2.jpg' alt='Anchoring Image 2'>
+                <img src='anchoring3.jpg' alt='Anchoring Image 3'>
+            </div>
+        </div>
+        <div class='gallery-section'>
+            <h3>Hackathons</h3>
+            <div class='gallery-container'>
+                <img src='hackathon1.jpg' alt='Hackathon Image 1'>
+                <img src='hackathon2.jpg' alt='Hackathon Image 2'>
+                <img src='hackathon3.jpg' alt='Hackathon Image 3'>
+            </div>
+        </div>
+        <div class='gallery-section'>
+            <h3>Startup</h3>
+            <div class='gallery-container'>
+                <img src='startup1.jpg' alt='Startup Image 1'>
+                <img src='startup2.jpg' alt='Startup Image 2'>
+                <img src='startup3.jpg' alt='Startup Image 3'>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <p>Interested in collaborating or just want to say hi? Drop me a message!</p>
+        <div class="contact-container">
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/your-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/your-profile" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:your-email@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
